@@ -1,16 +1,23 @@
 <div class="container">
   <div class="row">
-    <div class="card d-flex flex-row">
+    <div class="card">
       <div class="card-header">
         <h1>Simple Angular Calculator</h1>
       </div>
       <div class="card-body">
-        <input type="text" class="form-control" [(ngModel)]="number1">
-        <input type="text" class="form-control" [(ngModel)]="number2">
-        <button type="button" class="btn-primary" (click)="addition()">Sum</button>
-        <button type="button" class="btn-primary" (click)="subtract()">Subtraction</button>
-        <button type="button" class="btn-primary" (click)="divide()">Divition</button>
-        <button type="button" class="btn-primary" (click)="multiply()">Muliplication</button>
+        <div class="d-flex flex-row">
+          <input type="number" class="form-control col-md-6" [(ngModel)]="number1">
+          <input type="number" class="form-control col-md-6" [(ngModel)]="number2">
+        </div>
+        <br />
+        <div>
+          <button type="button" class="btn btn-primary" (click)="addition()">Sum</button>
+          <button type="button" class="btn btn-success" (click)="subtract()">Subtraction</button>
+          <button type="button" class="btn btn-warning" (click)="divide()">Division</button>
+          <button type="button" class="btn btn-danger" (click)="multiply()">Muliplication</button>
+        </div>
+
+
       </div>
       <div class="card-header">
         <p>The Sum of {{number1}} and {{number2}} is {{result}}</p>
